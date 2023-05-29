@@ -1,0 +1,11 @@
+/* TEAM */
+
+    Ladislav Mihalik
+    Contact: dandoryx@gmail.com
+    From: Bratislava, Slovakia
+
+/* SITE */
+
+    Language: English
+    Doctype: HTML5
+

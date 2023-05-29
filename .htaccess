@@ -1,0 +1,19 @@
+#
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2023 Ladislav Mihalik <dandoryx@gmail.com>
+#
+
+Options -Indexes
+
+ErrorDocument 403 /error
+ErrorDocument 404 /error
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteCond %{THE_REQUEST} /public/([^\s?]*) [NC]
+RewriteRule ^ %1 [L,NE]
+
+RewriteRule ^((?!public/).*)$ public/index.php/$1 [L,NC]
